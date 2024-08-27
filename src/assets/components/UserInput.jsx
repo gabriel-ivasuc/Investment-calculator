@@ -4,7 +4,7 @@ export default function UserInput(){
   const [userInput, setUserInput] = useState({
     initialInvestment: 10000,
     annualInvestment: 5000,
-    expectedRturn: 5,
+    expectedReturn: 5,
     duration: 10,
   });
 
@@ -25,7 +25,7 @@ function handleChange(inputIdentifier, newValue) {
         <input type="number"
                required
                value={userInput.initialInvestment}
-               onChange={(event) =>handleChange('inputIdentifier',event.target.value)}
+               onChange={(event) =>handleChange('initialInvestment',event.target.value)}
         />
       </p>
       <p>
@@ -42,7 +42,7 @@ function handleChange(inputIdentifier, newValue) {
         <label>Expected Return</label>
         <input type="number"
                required
-               value={userInput.expectedRturn}
+               value={userInput.expectedReturn}
                onChange={(event) =>handleChange('expectedReturn',event.target.value)}
         />
       </p>
